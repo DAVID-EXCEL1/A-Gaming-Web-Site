@@ -47,10 +47,25 @@ nav ul li a {
     text-decoration: none;
     color: #000000;
     font-size: 14px;
+    position: relative;
 }
 
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff5ea2;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
 nav ul li a:hover {
-    color: #ff5ea2;
+    color: #2e2e2e;
 }
 
 .row {
